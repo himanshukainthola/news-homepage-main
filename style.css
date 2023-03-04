@@ -71,7 +71,7 @@
 
 body {
   padding: 2rem 1rem;
-  margin-inline: auto;
+  margin: 0 auto;
   font-family: var(--ff);
   font-size: .9375rem;
   background: var(--clr-neutral-Off-white);
@@ -179,7 +179,6 @@ body {
 }
 
 .main-section__btn{
-  display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -214,7 +213,7 @@ body {
   font-size: 1.25rem;
 }
 
-.article h4:hover{
+.article h4 > span:hover{
   color: var(--clr-primary-orange);
   cursor: pointer;
 }
@@ -268,7 +267,7 @@ body {
   font-weight: var(--fw-extrabold);
 }
 
-.section-2__div--content h4:hover{
+.section-2__div--content h4 > span:hover{
   color: var(--clr-primary-red);
   cursor: pointer;
 }
@@ -277,3 +276,95 @@ body {
   color: var(--clr-neutral-Dark-grayish-blue);
   line-height: 1.5rem;
 }
+
+
+@media(min-width: 768px){
+  body{
+    max-width: 48.5rem;
+    margin: 0 auto;
+  }
+}
+
+
+@media(min-width: 1440px){
+  body{
+    max-width: 77%;
+    height: 100vh;
+    margin:  5.5rem auto;
+    padding: 0;
+  }
+  .navbar{
+    padding: 0;
+    margin-bottom: 3.5rem;
+  }
+  .navbar__logo{
+    width: 65px;
+  }
+
+  .nav__menu{
+    gap: 2.2rem;
+  }
+
+  .nav__menu a{
+    font-size: 1.0299rem;
+    opacity: 0.7;
+    font-weight: 450;
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 65.9% 31.7%;
+    gap: 1.6rem;
+  }
+
+  .main-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    grid-auto-columns: 1fr ;
+  }
+
+  .main-section > .main-section__img{
+    grid-column: span 2;
+  }
+
+  .main-section h1{
+    margin: 0;
+    font-size: 3.6rem;
+    line-height: 3.5rem;
+  }
+
+  .main-section__discrp{
+    display: grid;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .main-section__btn{
+   justify-self: start;
+  }
+
+
+  .article{
+    margin: 0;
+    padding: 2rem 1.5rem;
+  }
+
+  .article h2{
+    font-size: 2.5rem;
+  }
+  .section-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.8rem;
+    margin-top: 4.5rem;
+  }
+
+  .section-2__div{
+    height: 8rem;
+    margin: 0;
+  }
+
+
+}
+

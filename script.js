@@ -2,7 +2,6 @@ const navIcons = document.querySelector('.navbar__icons');
 const navMenu = document.querySelector('.nav__menu');
 
 
-
 navIcons.addEventListener('click', () => {
     const visibilty = navMenu.getAttribute('data-visible');
 
